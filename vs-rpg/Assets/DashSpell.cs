@@ -10,7 +10,7 @@ public class DashSpell : Spell
         MovementScript movement = parent.GetComponent<MovementScript>();
         Rigidbody2D rigidbody = parent.GetComponent<Rigidbody2D>();
 
-        movement.canMove = false
+        movement.canMove = false;
         rigidbody.linearVelocity = movement.moveValue.normalized * dashVelocity;
     }
 }
