@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 316713353}
   - component: {fileID: 316713354}
   - component: {fileID: 316713355}
+  - component: {fileID: 316713356}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -223,10 +224,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 316713350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68ec49a4362427b4a8fcc0220901b67e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b09a6d496fe44b468e5a15419409f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
   moveSpeed: 5
+  moveValue: {x: 0, y: 0}
+  canMove: 1
 --- !u!50 &316713354
 Rigidbody2D:
   serializedVersion: 5
@@ -254,8 +257,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &316713355
-MonoBehaviour:
 --- !u!58 &316713355
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -264,12 +265,6 @@ CircleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316713350}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 501160916044e5b4da199f12e001e5a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  spell: {fileID: 11400000, guid: c870a6e01d8d2b349a5031604b77f6c6, type: 2}
-  key: 113
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -298,6 +293,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &316713356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316713350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501160916044e5b4da199f12e001e5a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpellHolder
+  spell: {fileID: 11400000, guid: f00e21f38219112418302962f0625879, type: 2}
+  key: 32
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
