@@ -15,6 +15,7 @@ public class FollowPlayerScript : MonoBehaviour
         
     }
 
+    // Late update used so that the camera moves after the player moves and not before.
     void LateUpdate()
     {
         transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y, transform.position.z);
