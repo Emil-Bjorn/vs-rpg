@@ -254,6 +254,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &316713355
+MonoBehaviour:
 --- !u!58 &316713355
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -262,6 +264,12 @@ CircleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316713350}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501160916044e5b4da199f12e001e5a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  spell: {fileID: 11400000, guid: c870a6e01d8d2b349a5031604b77f6c6, type: 2}
+  key: 113
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
