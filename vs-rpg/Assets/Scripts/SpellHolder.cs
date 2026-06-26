@@ -6,7 +6,7 @@ public class SpellHolder : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Spell spell;
-    public KeyCode key;
+    public Key key = Key.Q;
     float cooldownTime;
     float activeTime;
 
@@ -19,13 +19,14 @@ public class SpellHolder : MonoBehaviour
 
     SpellState state = SpellState.ready;
 
+
     // Update is called once per frame
     void Update()
     {
         switch (state)
         {
             case SpellState.ready:
-                if (Keyboard.current.qKey.wasPressedThisFrame)
+                if (Keyboard.current[key].wasPressedThisFrame)
                 {
                     spell.Activate(gameObject);
                     state = SpellState.active;
