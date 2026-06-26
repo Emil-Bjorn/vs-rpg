@@ -4,6 +4,8 @@ public class Spell : ScriptableObject
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
         public string SpellName;
+
+        public string ManaCost;
         public float cooldownTime;
         public float activeTime;
 
