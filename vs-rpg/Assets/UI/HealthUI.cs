@@ -11,11 +11,25 @@ public class HealthUI : MonoBehaviour
         var root = GetComponent<UIDocument>().rootVisualElement;
         healthLabel = root.Q<Label>("HealthLabel");
         healthLabel.text = $"Health: {playerHealth.CurrentHealth}";
+        playerHealth.OnHealthChanged += UpdateHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    void UpdateHealth()
+    {
         healthLabel.text = $"Health: {playerHealth.CurrentHealth}";
+    }
+
+    void OnDestroy()
+    {
+        if (playerHealth != null)
+        {
+            playerHealth.OnHealthChanged -= UpdateHealth;
+        }
     }
 }

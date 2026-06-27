@@ -5,7 +5,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float currentHealth;
     public float CurrentHealth => currentHealth;
-    public event Action<float> OnHealthChanged;
+    public event Action OnHealthChanged;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,8 +22,14 @@ public class Health : MonoBehaviour
     {
         if (CompareTag("Player") && collision.gameObject.CompareTag("Enemy"))
         {
-            currentHealth -= 5;
+            TakeDamage(5);
             Debug.Log(currentHealth);
         }
+    }
+
+    void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        OnHealthChanged?.Invoke();
     }
 }
