@@ -486,6 +486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3656732923885832799, guid: 4bf161d11df638d4ca3c5ed6a8f09142, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3860093821495311834, guid: 4bf161d11df638d4ca3c5ed6a8f09142, type: 3}
       propertyPath: playerRb
       value: 
@@ -586,6 +590,10 @@ PrefabInstance:
     - target: {fileID: 7602972399709868609, guid: 93d17975789b8844e824c81bf6c92349, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602972399709868609, guid: 93d17975789b8844e824c81bf6c92349, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
