@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private float health;
+    [SerializeField] private float currentHealth;
+    public float CurrentHealth => currentHealth;
+    public event Action<float> OnHealthChanged;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,8 +22,8 @@ public class Health : MonoBehaviour
     {
         if (CompareTag("Player") && collision.gameObject.CompareTag("Enemy"))
         {
-            health -= 5;
-            Debug.Log(health);
+            currentHealth -= 5;
+            Debug.Log(currentHealth);
         }
     }
 }
