@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (CompareTag("Player") & collision.gameObject.CompareTag("Enemy"))
+        if (CompareTag("Player") && collision.gameObject.CompareTag("Enemy"))
         {
             health -= 5;
             Debug.Log(health);
