@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 618607477967881821}
   - component: {fileID: 3860093821495311834}
   - component: {fileID: 2322024704569579678}
+  - component: {fileID: 5897712420248882089}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -187,3 +188,16 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 1
+--- !u!114 &5897712420248882089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3656732923885832799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f48c54d443e3b43a7904db5a772d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  health: 10
