@@ -4,6 +4,8 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float currentHealth;
+    [SerializeField] private float maxHealth;
+    [SerializeField] private float healthRegen;
     public float CurrentHealth => currentHealth;
     public event Action OnHealthChanged;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
